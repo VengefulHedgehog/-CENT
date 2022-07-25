@@ -1,10 +1,19 @@
 @font-face {
-	font-family: 'DrukWideCyr';
-	src: url('../fonts/DrukCyr-Medium.eot');
-	src: local('☺'), url('../fonts/DrukCyr-Medium.woff') format('woff'), url('../fonts/DrukCyr-Medium.ttf') format('truetype'), url('../fonts/DrukCyr-Medium.svg') format('svg');
+    font-family: 'Druk Cyr';
+    src: url('../fonts/DrukCyr-Medium.eot');
+    src: local('../fonts/Druk Cyr Medium'), local('../fonts/DrukCyr-Medium'), url('../fonts/DrukCyr-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/DrukCyr-Medium.woff2') format('woff2'), url('../fonts/DrukCyr-Medium.woff') format('woff'), url('../fonts/DrukCyr-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+	font-family: 'Druk Wide';
+	src: url('../fonts/Druk Wide Medium.eot');
+	src: local('☺'), url('../fonts/Druk Wide Medium.woff') format('woff'), url('../fonts/Druk Wide Medium.ttf') format('truetype'), url('../fonts/Druk Wide Medium.svg') format('svg');
 	font-weight: 500;
 	font-style: normal;
 }
+
+
 
 
 *{
@@ -45,3 +54,130 @@ ul li{list-style:none;}
 img{vertical-align: top;}
 
 h1,h2,h3,h4,h5,h6 {font-size: inherit; font-weight: 400;} 
+
+/*___________________________________________________________________________________________________________________*/
+header{
+    position: fixed;
+    width: 100%;
+}
+.wrapper {
+    width: 100%;
+    background:#0E0E0E;
+    padding: 0 135px;
+}
+.header__content {
+    display: flex;
+    justify-content: space-between;
+}
+.header__logo {
+    padding: 41px 0 37px 0;
+    font-family: 'Druk Wide';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 52px;
+    color: #FFFFFF;
+}
+.header__menu {
+    padding: 40px 0 69px 0;
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    font-family: 'Druk Cyr';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+
+/* ---------------------main--------------------- */
+
+.main {
+}
+.main__content{
+    display: flex;
+    flex-direction: column;
+}
+.main__title {
+    text-align: center;
+    padding: 231px 0 253px 0;
+    font-family: 'Druk Cyr';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 82px;
+    line-height: 100px;
+    color: #FFFFFF;
+}
+.main__info {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.info__address {
+}
+.info__mail {
+}
+
+/* ---------------------about--------------------- */
+
+.about {
+    font-style: normal;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+.about__content{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 200px 0 0 0;
+}
+.about__title {
+    font-family: 'Druk Cyr';
+    font-size: 30px;
+    line-height: 36px;
+}
+.about__info {
+    display:flex;
+    flex-direction: column;
+
+}
+.about__text {
+    font-family: 'Montserrat';
+    font-size: 20px;
+    line-height: 24px;
+    width: 498px;
+    margin: 0 0 84px 0;
+}
+.about__buttons {
+    display: flex;
+    flex-direction: row;
+}
+.about__buttons__contact {
+    font-family: 'Druk Cyr';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    background:#0E0E0E;
+    color: #FFFFFF;
+    padding: 0 0 0 11px;
+}
+.about__buttons__more {
+    font-family: 'Druk Cyr';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    background:#0E0E0E;
+    color: #FFFFFF;
+    padding: 0 0 0 57px;
+}
