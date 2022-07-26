@@ -16,6 +16,7 @@
 
 
 
+
 *{
     padding: 0;
     margin: 0;
@@ -56,6 +57,10 @@ img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6 {font-size: inherit; font-weight: 400;} 
 
 /*___________________________________________________________________________________________________________________*/
+
+body::-webkit-scrollbar{
+    display: none;
+}
 header{
     position: fixed;
     width: 100%;
@@ -160,6 +165,7 @@ header{
 .about__buttons {
     display: flex;
     flex-direction: row;
+    margin: 0 0 200px 0;
 }
 .about__buttons__contact {
     font-family: 'Druk Cyr';
@@ -181,3 +187,221 @@ header{
     color: #FFFFFF;
     padding: 0 0 0 57px;
 }
+
+/* ---------------------cases--------------------- */
+
+.cases {
+    color: #FFFFFF;
+    font-style: normal;
+    font-weight: 500;
+}
+.case__content {
+    display: flex;
+    flex-direction: column;
+}
+.case__title {
+    font-family: 'Druk Cyr';
+    font-size: 30px;
+    line-height: 36px;
+}
+.case__link {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+.case__link__left {
+    margin: 0 60px 0 0;
+
+}
+.link__content {
+}
+.link__img {
+    margin: 0 0 10px 0;
+    width: 100%;
+    max-width: 540px;
+}
+.link__title {
+    font-family: 'Druk Cyr';
+    font-size: 16px;
+    line-height: 19px;
+    margin: 0 0 2px 0;
+}
+.link__text {
+    font-family: 'Montserrat';
+    font-size: 12px;
+    line-height: 15px;
+    margin: 0 0 40px 0;
+}
+.case__link__right {
+}
+
+/* ---------------------assets--------------------- */
+
+.assets {
+    background: #001CAD;
+}
+.assets__content {
+    display: flex;
+    flex-direction: column;
+}
+.assets__title {
+    font-family: 'Druk Cyr';
+    font-size: 30px;
+    line-height: 36px;
+    color: #FFFFFF;
+    padding: 34px 0 0 54px;
+    margin: 0 0 56px 0;
+}
+.assets__image {
+    display:flex;
+    flex-direction: row;
+    padding: 0 0 150px 8px;
+    overflow-x: auto;
+}
+.assets__image::-webkit-scrollbar{
+    display: none;
+}
+.assets__image__token {
+    height: 490px;
+    margin: 0 30px 0 0;
+}
+
+/* ---------------------clients--------------------- */
+
+.clients {
+    background: #0E0E0E;
+    overflow-x: auto;
+}
+.clients__title {
+    font-family: 'Druk Cyr';
+    font-size: 30px;
+    line-height: 36px;
+    color: #FFFFFF;
+    padding: 140px 0 0 135px;
+    margin: 0 0 50px 0;
+}
+.clients__logo{
+    overflow-x:hidden;
+}
+.clients__logo__odd {
+    margin: 0 0 50px 0;
+}
+.clients__logo__even {
+    margin: 0 0 50px -360px;
+}
+
+/* ---------------------footer--------------------- */
+
+.footer__content {
+    background: #001CAD;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 76px 130px 100px;
+    color: #FFFFFF;
+}
+.footer__contacts {
+    display: flex;
+    flex-direction: column;
+}
+.contacts__title {
+    font-family: 'Druk Cyr';
+    font-size: 30px;
+    line-height: 36px;
+    margin: 0 0 60px 0;
+}
+.contacts__address, .contacts__name {
+    font-family: 'Montserrat';
+    font-size: 20px;
+    line-height: 24px;
+}
+.contacts__address{
+    margin: 0 0 60px 0;
+}
+.footer__input__name {
+    grid-area: name;
+    margin: 0 14px 9px 0;
+}
+.footer__input__email {
+    grid-area: email;
+    margin:0 0 9px 0;
+}
+.footer__input__phone {
+    grid-area: phone;
+    margin: 0 0 9px 0;
+}
+.footer__input__search {
+    grid-area: search;
+}
+.footer__input__message {
+    grid-area: message;
+    width: 498px;
+    height: 171px;
+    background: #0024DC;
+    font-family: 'Montserrat';
+    font-size: 12px;
+    line-height: 15px;
+    color: #FFFFFF;
+    padding: 16px 0 0 16px;
+}
+.footer__input__name, .footer__input__email, .footer__input__phone, .footer__input__search {
+    width: 242px;
+    height: 47px;
+    background: #0024DC;
+    font-family: 'Montserrat';
+    font-size: 12px;
+    line-height: 15px;
+    color: #FFFFFF;
+    padding: 16px;
+}
+input{
+    text-align: start;
+}
+input::placeholder{
+    color: #FFFFFF;
+}
+.footer__input__message::placeholder{
+    font-family: 'Montserrat';
+    font-size: 12px;
+    line-height: 15px;
+    color: #FFFFFF;
+}
+.footer__input {
+    position: relative;
+    display: grid;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FFFFFF;
+    grid-template-columns: 256px 242px;
+    grid-template-rows: 56px 56px 171px;
+    grid-template-areas:"name email"
+                        "phone search"
+                        "message message";
+}
+.footer__button {
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid white;
+    height: 126px;
+    width: 126px;
+    padding: 55px 0 0 26px;
+    bottom: -40px;
+    right: -63px;
+}
+.footer__button__text {
+    font-family: 'Montserrat';
+    font-size: 12px;
+    line-height: 15px;
+    color: #FFFFFF;
+}
+.footer__button__text span{
+    background: url(/img/icons/Arrow.svg) bottom no-repeat;
+    padding: 0 0 10px 0;
+}
+.footer__button__check{
+    display:none;
+}
+
