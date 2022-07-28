@@ -1,28 +1,35 @@
-let assets__image = document.getElementsByClassName('assets__image');
-assets__image.onmousedown = () => {
-    let pageX = 0;
-    document.onmousemove = e => {
-        if (pageX !== 0) {
-            assets__image.scrollLeft = assets__image.scrollLeft + (pageX - e.pageX);
-        };
-        pageX = e.pageX;
-    };
-    assets__image.onmouseup = () => {
-        document.onmousemove = null;
-        assets__image.onmouseup = null;
-    };
+/* Разворачивание cases */
+let caseBut = document.querySelector('.case__button'),
+    cases = document.querySelector('.cases');
 
-  // отменяем браузерный drag
-    assets__image.ondragstart = () => {
-        return false;
-    };
-};
+caseBut.addEventListener('click', () =>{
+    caseBut.style.display = "none";
+    cases.style.height = "2033px";
+})
 
-let footButText=document.getElementsByClassName('footer__button__text')
-    footBut=document.getElementsByClassName('footer__button'),
-    footButCheck=document.getElementsByClassName('footer__button__check');
+/* спуск more__about */
+let moreBut = document.querySelector('.about__buttons__more'),
+    moreAbout = document.querySelector('.more__about');
 
-footBut.addEventListener("mouseover", function() {
-    footButText.style.display="none";
-    footButCheck.style.display="block";
+moreBut.onmouseover = function (){
+    moreAbout.style.position = "static";
+}
+moreBut.onmouseout = function (){
+    moreAbout.style.position = "absolute";
+    moreAbout.style.top = "-100%";
+}
+
+/* появление cases__full */
+let linkImg = document.querySelectorAll('.link__img'),
+    casesFull = document.querySelector('.cases__full'),
+    fullButton = document.querySelector('.full__button ');
+
+linkImg.forEach(function (e){
+    e.addEventListener('click', () =>{
+        casesFull.style.opacity = "1";
+    });
+});
+
+fullButton.addEventListener('click', () =>{
+    casesFull.style.opacity = "0";
 })
