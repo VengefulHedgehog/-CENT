@@ -4,7 +4,7 @@ let caseBut = document.querySelector('.case__button'),
 
 caseBut.addEventListener('click', () =>{
     caseBut.style.display = "none";
-    cases.style.height = "2033px";
+    cases.style.height = "1950px";
 })
 
 /* спуск more__about */

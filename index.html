@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile_style.css">
 </head>
 <body>
     <header>
@@ -14,6 +15,9 @@
             <div class="header__content">
                 <div class="header__logo">
                     <h1>Cent</h1>
+                </div>
+                <div class="header__burger">
+                    <span></span>                            
                 </div>
                 <div class="header__menu">
                     <p class="menu__case">кейсы</p>
@@ -115,6 +119,18 @@
                     <p>Кейсы</p>
                 </div>
                 <div class="case__link">
+                    <div class="case__link__mobile">
+                        <div class="link__content">
+                            <img class="link__img" src="img/results_pizza.jpg" alt="">
+                            <p class="link__title">Итоги года 2021</p>
+                            <p class="link__text">Ежегодная премия</p>
+                        </div>
+                        <div class="link__content">
+                            <img class="link__img" src="img/enter_salt.jpg" alt="">
+                            <p class="link__title">Enter x Водоканал</p>
+                            <p class="link__text">Рекламная коммуникация</p>
+                        </div>
+                    </div>
                     <div class="case__link__left">
                         <div class="link__content">
                             <img class="link__img" src="img/results_pizza.jpg" alt="">
@@ -257,33 +273,31 @@
             <p>Наши клиенты</p>
         </div>
         <div class="clients__logo">
-            <img src="img/clients.png" alt="" class="clients__logo__odd">
-            <img src="img/clients.png" alt="" class="clients__logo__even">
-            <img src="img/clients.png" alt="" class="clients__logo__odd">
-            <img src="img/clients.png" alt="" class="clients__logo__even">
+            <img src="img/clients.png" alt="" class="clients__logo__odd clients__mobile__first">
+            <img src="img/clients.png" alt="" class="clients__logo__even clients__mobile__second">
+            <img src="img/clients.png" alt="" class="clients__logo__odd clients__mobile__third">
+            <img src="img/clients.png" alt="" class="clients__logo__even clients__mobile__fourth">
         </div>
     </div>
     <footer>
         <div class="footer__content">
-            <div class="footer__contacts">
-                <div class="contacts__title">
-                    <p>Контакты</p>
-                </div>
-                <div class="contacts__address">
-                    <p>8 800 700 60 50</p>
-                    <p>info@cent</p>
-                    <p>Казань, Карла Маркса 9</p>
-                </div>
-                <div class="contacts__name">
-                    <p>Агенство Cent, 2017</p>
-                </div>
+            <div class="contacts__title">
+                <p>Контакты</p>
+            </div>
+            <div class="contacts__address">
+                <p>8 800 700 60 50</p>
+                <p>info@cent</p>
+                <p>Казань, Карла Маркса 9</p>
+            </div>
+            <div class="contacts__name">
+                <p>Агенство Cent, 2017</p>
             </div>
             <div class="footer__input">
                 <input type="text" placeholder="Ваше Имя" required  class="footer__input__name">
                 <input type="email" placeholder="E-mail" required  class="footer__input__email">
                 <input type="tel" placeholder="Телефон" required  class="footer__input__phone">
                 <input type="text" placeholder="Что вы ищете" required  class="footer__input__search">
-                <input type="text" placeholder="Сообщение" required  class="footer__input__message">
+                <textarea type="text" placeholder="Сообщение" required  class="footer__input__message"></textarea>
                 <div class="footer__button">
                     <a name="call" href="" class="footer__button__text"><span>Отправить</span></a>
                     <img src="img/icons/check.png" alt="" class="footer__button__check">

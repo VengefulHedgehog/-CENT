@@ -57,13 +57,13 @@ img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6 {font-size: inherit; font-weight: 400;} 
 
 /*___________________________________________________________________________________________________________________*/
-
 body::-webkit-scrollbar{
     display: none;
 }
 header{
     position: fixed;
     width: 100%;
+    z-index: 2;
 }
 .wrapper {
     width: 100%;
@@ -82,6 +82,9 @@ header{
     font-size: 40px;
     line-height: 52px;
     color: #FFFFFF;
+}
+.header__burger{
+    display:none;
 }
 .header__menu {
     padding: 40px 0 69px 0;
@@ -209,6 +212,8 @@ header{
     background:#0E0E0E;
     padding: 0 0 0 57px;
     color: #FFFFFF;
+    position: relative;
+    z-index: 1;
 }
 
 /* ---------------------more__about--------------------- */
@@ -303,6 +308,9 @@ header{
     flex-direction: row;
     justify-content:space-between;
 }
+.case__link__mobile{
+    display: none;
+}
 .case__link__left {
     margin: 0 60px 0 0;
 
@@ -340,6 +348,7 @@ header{
     padding: 0 0 0 36px;
     top: 50%;
     right: 50%;
+    z-index: 1;
 }
 .case__button__text {
     font-family: 'Montserrat';
@@ -352,12 +361,12 @@ header{
 .cases__full {
     color:white;
     font-family: 'Montserrat';
-    position: relative;
-    position:absolute;
+    position: absolute;
     top:0;
     left:0;
     opacity: 0;
     transition: 1.5s;
+    z-index: 0;
 }
 .full__button {
     display:flex;
@@ -459,7 +468,7 @@ header{
     position: absolute;
     top: 232px;
     left: 85px;
-    z-index: 5;
+    z-index: 1;
 }
 
 /* ---------------------clients--------------------- */
@@ -490,29 +499,33 @@ header{
 
 .footer__content {
     background: #001CAD;
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display:grid;
+    grid-template-columns: 1fr 498px;
+    grid-template-rows: 100px 130px 1fr;
+    grid-template-areas:"title input"
+                        "contacts input"
+                        "agency input";
     padding: 76px 130px 100px;
     color: #FFFFFF;
-}
-.footer__contacts {
-    display: flex;
-    flex-direction: column;
 }
 .contacts__title {
     font-family: 'Druk Cyr';
     font-size: 30px;
     line-height: 36px;
     margin: 0 0 60px 0;
+    grid-area: title;
 }
 .contacts__address, .contacts__name {
     font-family: 'Montserrat';
     font-size: 20px;
     line-height: 24px;
 }
+.contacts__name{
+    grid-area: agency;
+}
 .contacts__address{
     margin: 0 0 60px 0;
+    grid-area: contacts;
 }
 .footer__input__name {
     grid-area: name;
@@ -539,6 +552,9 @@ header{
     line-height: 15px;
     color: #FFFFFF;
     padding: 16px 0 0 16px;
+}
+.footer__input__message::-webkit-scrollbar{
+    display: none;
 }
 .footer__input__name, .footer__input__email, .footer__input__phone, .footer__input__search {
     width: 242px;
@@ -571,6 +587,7 @@ input::placeholder{
     font-size: 12px;
     line-height: 15px;
     color: #FFFFFF;
+    grid-area: input;
     grid-template-columns: 256px 242px;
     grid-template-rows: 56px 56px 171px;
     grid-template-areas:"name email"
