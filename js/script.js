@@ -4,8 +4,8 @@ let caseBut = document.querySelector('.case__button'),
 
 caseBut.addEventListener('click', () =>{
     caseBut.style.display = "none";
-    cases.style.height = "1950px";
-})
+    cases.style.height = "295%";
+});
 
 /* спуск more__about */
 let moreBut = document.querySelector('.about__buttons__more'),
@@ -13,11 +13,11 @@ let moreBut = document.querySelector('.about__buttons__more'),
 
 moreBut.onmouseover = function (){
     moreAbout.style.position = "static";
-}
+};
 moreBut.onmouseout = function (){
     moreAbout.style.position = "absolute";
-    moreAbout.style.top = "-100%";
-}
+    moreAbout.style.top = "100%";
+};
 
 /* появление cases__full */
 let linkImg = document.querySelectorAll('.link__img'),
@@ -26,10 +26,10 @@ let linkImg = document.querySelectorAll('.link__img'),
 
 linkImg.forEach(function (e){
     e.addEventListener('click', () =>{
-        casesFull.style.opacity = "1";
+        casesFull.style.opacity = "2";
     });
 });
 
 fullButton.addEventListener('click', () =>{
     casesFull.style.opacity = "0";
-})
+});

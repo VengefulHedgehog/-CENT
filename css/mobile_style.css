@@ -134,8 +134,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        max-width: 100%;
-        max-height: 100%;
+        width: 100%;
         display: none;
         opacity: 0;
         transition: 1.5s;
@@ -160,8 +159,6 @@
     /* ---------------------about--------------------- */
     
     .about {
-        font-style: normal;
-        font-weight: 500;
         color: #FFFFFF;
     }
     .about__content{
@@ -186,7 +183,7 @@
         font-family: 'Montserrat';
         font-size: 16px;
         line-height: 20px;
-        width: 498px;
+        width: 100%;
         margin: 0 0 40px 0;
     }
     .about__buttons {
@@ -287,8 +284,8 @@
         color: #FFFFFF;
         font-style: normal;
         font-weight: 500;
-        height: 1237px;
-        overflow-y: hidden;
+        height: 100%;
+
     }
     .cases::-webkit-scrollbar{
         display: none;
@@ -437,25 +434,26 @@
         flex-direction: column;
     }
     .assets__title {
+        background: #0E0E0E;
         font-family: 'Druk Cyr';
-        font-size: 30px;
-        line-height: 36px;
+        font-size: 24px;
+        line-height: 29px;
         color: #FFFFFF;
-        padding: 34px 0 0 54px;
-        margin: 0 0 56px 0;
+        padding: 0 0 20px 15px;
+        margin: 0;
     }
     .assets__image {
         display:flex;
         flex-direction: row;
-        padding: 0 0 150px 8px;
-        overflow-x: auto;
-        
+        padding: 40px 0 40px 15px;
+        overflow-x: auto; 
     }
     .assets__image::-webkit-scrollbar{
         display: none;
     }
     .assets__image__token {
-        height: 490px;
+        height: 297px;
+        width: 165px;
         margin: 0 30px 0 0;
         background: black;
     }
@@ -464,12 +462,12 @@
     }
     .assets__image__text{
         font-family: 'Montserrat';
-        font-size: 25px;
-        line-height: 30px;
+        font-size: 20px;
+        line-height: 24px;
         color: #FFFFFF;
         position: absolute;
-        top: 232px;
-        left: 85px;
+        top: 137px;
+        left: 55px;
         z-index: 1;
     }
     
@@ -564,6 +562,7 @@
         line-height: 15px;
         color: #FFFFFF;
         padding: 16px 0 0 16px;
+        resize: none;
     }
     .footer__input__message::-webkit-scrollbar{
         display: none;
