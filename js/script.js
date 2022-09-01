@@ -15,18 +15,35 @@ caseBut.addEventListener('click', () =>{
     cases.style.height = "auto";
 });
 
+const infoAddress = document.querySelector('.info__address'),
+    mapMobile = document.querySelector('.map__mobile');
+    infoAddress.onmouseover = function(){
+        mapMobile.style.display = "block";
+        document.body.style.overflow = 'hidden';
+        infoAddress.style.opacity = "0"; 
+    };
+    mapMobile.onmouseout = function(){
+        mapMobile.style.display = "none";
+        document.body.style.overflow = ''; 
+        infoAddress.style.opacity = "1"; 
+    };
+
 /* спуск more__about */
 const moreBut = document.querySelector('.about__buttons__more'),
     moreAbout = document.querySelector('.more__about');
 
-moreBut.onmouseover = function (){
-    moreAbout.style.bottom = "10%";
+moreBut.onmouseover = function showMoreAbout(){
+    moreAbout.style.top = "10%";
     moreAbout.style.zindex = "6";
     moreBut.style.opacity = "0";
+    moreAbout.style.display = "block";
+    document.body.style.overflow = 'hidden'; 
 };
-moreBut.onmouseout = function (){
-    moreAbout.style.bottom = "100%";
+moreBut.onmouseout = function hideMoreAbout (){
+    moreAbout.style.display = "none";
+    moreAbout.style.top = "-100%";
     moreBut.style.opacity = "1";
+    document.body.style.overflow = '';
 };
 
 /* появление cases__full */
