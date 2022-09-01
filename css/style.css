@@ -251,7 +251,7 @@ a, a:visited{
     padding: 0 0 0 57px;
     color: #FFFFFF;
     position: relative;
-    z-index: 3;
+    z-index: 1;
     transition: 0.7s ease;
 } 
 
@@ -264,15 +264,15 @@ a, a:visited{
     color: #FFFFFF;
     position:fixed;
     width: 100%;
-    height: 70%;
-    bottom: 100%;
+    height: 100%;
+    top: -100%;
     transition: 1s;
 }
 .more__about__content {
     display: grid;
     justify-content: center;
-    grid-template-columns: 380px 380px 380px ;
-    grid-template-rows: 375px 180px;
+    grid-template-columns:30% 30% 30% ;
+    grid-template-rows: 375px 220px;
     grid-template-areas:"massmedia network pr"
                         "creative blogers events";
 }
@@ -327,14 +327,13 @@ a, a:visited{
     color: #FFFFFF;
     font-style: normal;
     font-weight: 500;
-    height: calc(1700px - 50%);
-    overflow-y: hidden; 
+    height: 70%;
+    overflow-y: scroll; 
 }
 .cases::-webkit-scrollbar{
     display: none;
 }
 .case__content {
-    position: relative;
     display: flex;
     flex-direction: column;
 }
@@ -353,7 +352,7 @@ a, a:visited{
     display: none;
 }
 .case__link__left {
-    margin: 0 60px 0 0;
+    margin: 0 160px 0 0;
 
 }
 .link__content {
@@ -381,14 +380,14 @@ a, a:visited{
     display:flex;
     flex-direction: row;
     align-items: center;
-    position: absolute;
+    position: sticky;
     border-radius: 50%;
     border: 1px solid white;
     height: 126px;
     width: 126px;
     padding: 0 0 0 36px;
-    top: calc(1700px - 45%);
-    right: 45%;
+    left: 50%;
+    bottom: 100px;
     z-index: 1;
 }
 .case__button__text {
@@ -497,7 +496,7 @@ a, a:visited{
     display:flex;
     flex-direction: row;
     padding: 0 0 150px 8px;
-    overflow-x: auto;
+    overflow-x:hidden;
 }
 .assets__image::-webkit-scrollbar{
     display: none;

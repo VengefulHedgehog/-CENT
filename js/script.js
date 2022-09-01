@@ -20,12 +20,12 @@ const moreBut = document.querySelector('.about__buttons__more'),
     moreAbout = document.querySelector('.more__about');
 
 moreBut.onmouseover = function (){
-    moreAbout.style.bottom = "10%";
+    moreAbout.style.top = "150px";
     moreAbout.style.zindex = "6";
     moreBut.style.opacity = "0";
 };
 moreBut.onmouseout = function (){
-    moreAbout.style.bottom = "100%";
+    moreAbout.style.top = "-100%";
     moreBut.style.opacity = "1";
 };
 
