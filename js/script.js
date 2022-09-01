@@ -1,35 +1,49 @@
+/* Раскрытие бургера */
+const headBurger = document.querySelector('.header__burger'),
+    headMenu = document.querySelector('.header__menu');
+    headBurger.addEventListener('click', () =>{
+        headBurger.classList.toggle('active');
+        headMenu.classList.toggle('active');
+        document.body.classList.toggle('hidden');
+    });
 /* Разворачивание cases */
-let caseBut = document.querySelector('.case__button'),
+const caseBut = document.querySelector('.case__button'),
     cases = document.querySelector('.cases');
 
 caseBut.addEventListener('click', () =>{
     caseBut.style.display = "none";
-    cases.style.height = "295%";
+    cases.style.height = "auto";
 });
 
 /* спуск more__about */
-let moreBut = document.querySelector('.about__buttons__more'),
+const moreBut = document.querySelector('.about__buttons__more'),
     moreAbout = document.querySelector('.more__about');
 
 moreBut.onmouseover = function (){
-    moreAbout.style.position = "static";
+    moreAbout.style.bottom = "10%";
+    moreAbout.style.zindex = "6";
+    moreBut.style.opacity = "0";
 };
 moreBut.onmouseout = function (){
-    moreAbout.style.position = "absolute";
-    moreAbout.style.top = "100%";
+    moreAbout.style.bottom = "100%";
+    moreBut.style.opacity = "1";
 };
 
 /* появление cases__full */
-let linkImg = document.querySelectorAll('.link__img'),
+const casesTrigger = document.querySelectorAll('.link__img'),
     casesFull = document.querySelector('.cases__full'),
-    fullButton = document.querySelector('.full__button ');
+    casesClose = document.querySelector('.full__button ');
 
-linkImg.forEach(function (e){
-    e.addEventListener('click', () =>{
-        casesFull.style.opacity = "2";
+casesTrigger.forEach(btn =>{
+    btn.addEventListener('click', () =>{
+        casesFull.classList.add('show');
+        casesFull.classList.remove('hide');
+        document.body.style.overflow = 'hidden';
     });
 });
 
-fullButton.addEventListener('click', () =>{
-    casesFull.style.opacity = "0";
+casesClose.addEventListener('click', () =>{
+    casesFull.classList.remove('show');
+    casesFull.classList.add('hide');
+    document.body.style.overflow = '';
 });

@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "jshint": "^2.13.5"
+    "jshint": "^2.13.5",
+    "owl.carousel": "^2.3.4"
   }
 }

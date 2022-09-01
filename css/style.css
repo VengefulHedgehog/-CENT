@@ -66,7 +66,10 @@ body{
 header{
     position: fixed;
     width: 100%;
-    z-index: 2;
+    z-index: 5;
+}
+a, a:visited{
+    color: #FFF;
 }
 .wrapper {
     width: 100%;
@@ -89,7 +92,7 @@ header{
 .header__burger{
     display:none;
 }
-.header__menu {
+.header__menu__list {
     padding: 40px 0 69px 0;
     display: flex;
     flex-direction: row;
@@ -157,17 +160,31 @@ header{
 .info__address {
     position: relative;
     opacity: 1;
-    transition: 1.5s;
+    transition: 1s;
 }
+
 .map{
+    z-index:-1;
+    opacity:0;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
+    height: 100%;
     overflow-x:hidden;
-    opacity: 0;
-    transition: 1.5s;
-    z-index: -1;
+    overflow-y:hidden;
+    transition:opacity 1s, z-index 0s;
+}
+.map__mobile{
+    display:none;
+}
+.info__address:hover+ .map{
+    opacity:1;
+    z-index:6;
+}
+.info__address:hover{
+    z-index: 7;
+    opacity:0;
 }
 .info__mail {
     position: relative;
@@ -180,7 +197,6 @@ header{
     transition:bottom 1s cubic-bezier(0.68, -0.6, 0.32, 1.6), opacity 1s ease;
 }
 .info__mail p:hover+ .info__mail__img{
-    position:absolute;
     bottom:30px;
     opacity: 1;
 }
@@ -235,8 +251,9 @@ header{
     padding: 0 0 0 57px;
     color: #FFFFFF;
     position: relative;
-    z-index: 1;
-}
+    z-index: 3;
+    transition: 0.7s ease;
+} 
 
 /* ---------------------more__about--------------------- */
 
@@ -245,14 +262,15 @@ header{
     font-style: normal;
     font-weight: 500;
     color: #FFFFFF;
-    position: absolute;
-    top: -100%;
-    transition: 1.5s;
+    position:fixed;
+    width: 100%;
+    height: 70%;
+    bottom: 100%;
+    transition: 1s;
 }
 .more__about__content {
     display: grid;
     justify-content: center;
-    padding: 0 0 350px 0;
     grid-template-columns: 380px 380px 380px ;
     grid-template-rows: 375px 180px;
     grid-template-areas:"massmedia network pr"
@@ -309,7 +327,7 @@ header{
     color: #FFFFFF;
     font-style: normal;
     font-weight: 500;
-    height: 1237px;
+    height: calc(1700px - 50%);
     overflow-y: hidden; 
 }
 .cases::-webkit-scrollbar{
@@ -324,6 +342,7 @@ header{
     font-family: 'Druk Cyr';
     font-size: 30px;
     line-height: 36px;
+    margin: 0 0 60px 0;
 }
 .case__link {
     display: flex;
@@ -368,8 +387,8 @@ header{
     height: 126px;
     width: 126px;
     padding: 0 0 0 36px;
-    top: 50%;
-    right: 50%;
+    top: calc(1700px - 45%);
+    right: 45%;
     z-index: 1;
 }
 .case__button__text {
@@ -383,12 +402,19 @@ header{
 .cases__full {
     color:white;
     font-family: 'Montserrat';
-    position: absolute;
-    top:100%;
-    left:100%;
-    opacity: 0;
-    transition: 1.5s;
-    z-index: 0;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    overflow-y:auto;
+}
+.show{
+    display:block;
+}
+.hide{
+    display:none;
 }
 .full__button {
     display:flex;
@@ -442,6 +468,9 @@ header{
     max-width: 100%;
     max-height: 459px;
 }
+.case__link__title{
+    display:none;
+}
 .full__text {
     font-size: 20px;
     line-height: 24px;
@@ -468,7 +497,7 @@ header{
     display:flex;
     flex-direction: row;
     padding: 0 0 150px 8px;
-    overflow-x: auto;   
+    overflow-x: auto;
 }
 .assets__image::-webkit-scrollbar{
     display: none;
@@ -477,6 +506,7 @@ header{
     height: 490px;
     margin: 0 30px 0 0;
     background: black;
+    cursor: pointer;
 }
 .assets__image div{
     position: relative;

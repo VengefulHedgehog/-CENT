@@ -19,28 +19,30 @@
                 <div class="header__burger">
                     <span></span>                            
                 </div>
-                <div class="header__menu">
-                    <div class="menu__button">
-                        <button>кейсы</button>
-                        <img src="img/icons/cases_border.png" alt="" class="menu__line">
-                    </div>
-                    <div class="menu__button">
-                        <button>о нас</button>
-                        <img src="img/icons/about_border.png" alt="" class="menu__line">
-                    </div>
-                    <div  class="menu__button">
-                        <button>контакты</button>
-                        <img src="img/icons/contacts_border.png" alt="" class="menu__line">
-                    </div>
-                    <div class="menu__button">
-                        <button>новости</button>
-                        <img src="img/icons/news_border.png" alt="" class="menu__line">
-                    </div>
-                    <div class="menu__button">
-                        <button>клиенты</button>
-                        <img src="img/icons/clients_border.png" alt="" class="menu__line">
-                    </div>
-                </div>
+                <nav class="header__menu">
+                    <ul class="header__menu__list">
+                        <li class="menu__button">
+                            <a href="#cases">кейсы</a>
+                            <img src="img/icons/cases_border.png" alt="" class="menu__line">
+                        </li>
+                        <li class="menu__button">
+                            <a href="#about">о нас</a>
+                            <img src="img/icons/about_border.png" alt="" class="menu__line">
+                        </li>
+                        <li  class="menu__button">
+                            <a href="#contacts">контакты</a>
+                            <img src="img/icons/contacts_border.png" alt="" class="menu__line">
+                        </li>
+                        <li class="menu__button">
+                            <a href="#news">новости</a>
+                            <img src="img/icons/news_border.png" alt="" class="menu__line">
+                        </li>
+                        <li class="menu__button">
+                            <a href="#clients">клиенты</a>
+                            <img src="img/icons/clients_border.png" alt="" class="menu__line">
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </header>
@@ -53,6 +55,7 @@
                 <div class="main__info">
                     <div class="info__address">
                         <p>Казань, Карла Маркса 5 </p>
+                        <img src="img/map_mobile.png" alt="" class="map__mobile">
                     </div>
                     <div class="map">
                         <img src="img/map.png" alt="">
@@ -67,6 +70,7 @@
         </div>
     </div>
     <div class="about">
+        <a name="about"></a>
         <div class="wrapper">
             <div class="about__content">
                 <div class="about__title">
@@ -128,24 +132,13 @@
         </div>
     </div>
     <div class="cases">
+        <a name="cases"></a>
         <div class="wrapper">
             <div class="case__content">
                 <div class="case__title">
                     <p>Кейсы</p>
                 </div>
                 <div class="case__link">
-                    <div class="case__link__mobile">
-                        <div class="link__content">
-                            <img class="link__img" src="img/results_pizza.jpg" alt="">
-                            <p class="link__title">Итоги года 2021</p>
-                            <p class="link__text">Ежегодная премия</p>
-                        </div>
-                        <div class="link__content">
-                            <img class="link__img" src="img/enter_salt.jpg" alt="">
-                            <p class="link__title">Enter x Водоканал</p>
-                            <p class="link__text">Рекламная коммуникация</p>
-                        </div>
-                    </div>
                     <div class="case__link__left">
                         <div class="link__content">
                             <img class="link__img" src="img/results_pizza.jpg" alt="">
@@ -200,7 +193,7 @@
             </div>
         </div>
     </div>
-    <div class="cases__full">
+    <div class="cases__full hide">
         <div class="wrapper">
             <div class="full__button">
                 <p class="case__button__text">Назад</p>
@@ -217,6 +210,7 @@
             </div>
             <p class="full__text">Основная задача властей — поработать над улицей так, чтобы сделать ее привлекательной для разных клиентских групп. Для кого должна быть улица — вопрос открытый. Участники дискуссии из зала предложили отказаться от обозначений «туристам» и «жителем» и определить более точные критерии с помощью грамотного продуктолога; по их мнению, когда мы поймем, кому принадлежит Баумана, тогда и узнаем, какую ценность она в себе несет. Спикер и совладелец бара Kommunalka Андрей Блинов предложил сохранить Баумана универсальной, ведь уже сейчас в разное время она работает на разный сегмент граждан.</p>
             <div class="case__link">
+                <p class="case__link__title">Другие кейсы</p>
                 <div class="case__link__left">
                     <div class="link__content">
                         <img class="link__img" src="img/results_pizza.jpg" alt="">
@@ -267,6 +261,7 @@
         </div>
     </div>
     <div class="assets">
+        <a name="news"></a>
         <div class="assets__content">
             <div class="assets__title">
                 <p>Наши активы</p>
@@ -284,6 +279,7 @@
         </div>
     </div>
     <div class="clients">
+        <a name="clients"></a>
         <div class="clients__title">
             <p>Наши клиенты</p>
         </div>
@@ -296,6 +292,7 @@
     </div>
     <footer>
         <div class="footer__content">
+            <a name="contacts"></a>
             <div class="contacts__title">
                 <p>Контакты</p>
             </div>
@@ -321,5 +318,7 @@
         </div>   
     </footer>
     <script src="js/script.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
 </body>
 </html>
