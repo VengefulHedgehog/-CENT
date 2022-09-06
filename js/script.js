@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */ 
 /* Раскрытие бургера */
 const headBurger = document.querySelector('.header__burger'),
     headMenu = document.querySelector('.header__menu'),
@@ -21,17 +22,6 @@ caseBut.addEventListener('click', () =>{
     caseBut.style.display = "none";
     cases.style.height = "auto";
 });
-infoAddress.onmouseover = function(){
-    mapMobile.style.display = "block";
-    document.body.style.overflow = 'hidden';
-    infoAddress.style.opacity = "0"; 
-};
-mapMobile.onmouseout = function(){
-    mapMobile.style.display = "none";
-    document.body.style.overflow = ''; 
-    infoAddress.style.opacity = "1"; 
-};
-
 /* спуск more__about */
 moreBut.onmouseover = function showMoreAbout(){
     moreAbout.style.top = "10%";
@@ -61,3 +51,17 @@ casesClose.addEventListener('click', () =>{
     casesFull.classList.add('hide');
     document.body.style.overflow = '';
 });
+
+if (window.matchMedia("(max-width: 768px)").matches) {
+    infoAddress.onmouseover = function(){
+        mapMobile.style.display = "block";
+        document.body.style.overflow = 'hidden';
+        infoAddress.style.opacity = "0"; 
+    };
+    mapMobile.onmouseout = function(){
+        mapMobile.style.display = "none";
+        document.body.style.overflow = ''; 
+        infoAddress.style.opacity = "1"; 
+    };
+}
+    

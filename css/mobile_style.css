@@ -48,6 +48,9 @@
     
     .header__menu.active{
         top: 0;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
     }
     
     body.lock{
@@ -61,7 +64,7 @@
         font-size: 40px;
         line-height: 46px;
         color: #FFFFFF;
-        margin: 0 0 0 -50px;
+        margin: 0;
     }
     
     .header__menu__list li{
